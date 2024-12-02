@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiraTask.Api", "RiraTask.Api\RiraTask.Api.csproj", "{F2E11C38-E838-41A5-8414-A18998933C92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiraTask.Core", "RiraTask.Core\RiraTask.Core.csproj", "{D7F1407D-269F-473D-AFC1-B637D32A0966}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiraTask.Infrastructure", "RiraTask.Infrastructure\RiraTask.Infrastructure.csproj", "{39F6231D-55E6-4211-8339-365959B2B521}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2E11C38-E838-41A5-8414-A18998933C92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2E11C38-E838-41A5-8414-A18998933C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2E11C38-E838-41A5-8414-A18998933C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2E11C38-E838-41A5-8414-A18998933C92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7F1407D-269F-473D-AFC1-B637D32A0966}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7F1407D-269F-473D-AFC1-B637D32A0966}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7F1407D-269F-473D-AFC1-B637D32A0966}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7F1407D-269F-473D-AFC1-B637D32A0966}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39F6231D-55E6-4211-8339-365959B2B521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39F6231D-55E6-4211-8339-365959B2B521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39F6231D-55E6-4211-8339-365959B2B521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39F6231D-55E6-4211-8339-365959B2B521}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
