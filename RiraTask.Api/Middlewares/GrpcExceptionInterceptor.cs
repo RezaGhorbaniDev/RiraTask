@@ -1,5 +1,8 @@
-﻿using Grpc.Core;
+﻿using System.Net;
+using Grpc.Core;
 using Grpc.Core.Interceptors;
+using RiraTask.Core.Exceptions;
+
 namespace RiraTask.Api.Middlewares;
 
 public class GrpcExceptionInterceptor(ILogger<GrpcExceptionInterceptor> logger) : Interceptor
@@ -15,14 +18,28 @@ public class GrpcExceptionInterceptor(ILogger<GrpcExceptionInterceptor> logger) 
         }
         catch (RpcException)
         {
-            // Already is a gRPC exception
+            // Already a gRPC exception, let it bubble up
             throw;
         }
         catch (Exception ex)
         {
-            // TODO user NLog
-            logger.LogError(ex, "An unhandled exception occurred.");
-            throw new RpcException(new Status(StatusCode.Internal, "An internal server error occurred"), ex.Message);
+            logger.LogError(ex, ex.Message);
+
+            var message = "An unhandled exception occurred during the gRPC call.";
+            var statusCode = StatusCode.Internal;
+
+            if (ex is CustomException customException)
+            {
+                message = ex.Message;
+                statusCode = customException.StatusCode switch
+                {
+                    HttpStatusCode.NotFound => StatusCode.NotFound,
+                    HttpStatusCode.BadRequest => StatusCode.InvalidArgument,
+                    _ => statusCode
+                };
+            }
+
+            throw new RpcException(new Status(statusCode, message));
         }
     }
 }
