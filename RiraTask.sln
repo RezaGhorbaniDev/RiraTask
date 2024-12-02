@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiraTask.Core", "RiraTask.C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiraTask.Infrastructure", "RiraTask.Infrastructure\RiraTask.Infrastructure.csproj", "{39F6231D-55E6-4211-8339-365959B2B521}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiraTask.Domain", "RiraTask.Domain\RiraTask.Domain.csproj", "{D07AF9FF-6888-4115-B2F5-4BC7B90E46BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{39F6231D-55E6-4211-8339-365959B2B521}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39F6231D-55E6-4211-8339-365959B2B521}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39F6231D-55E6-4211-8339-365959B2B521}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D07AF9FF-6888-4115-B2F5-4BC7B90E46BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D07AF9FF-6888-4115-B2F5-4BC7B90E46BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D07AF9FF-6888-4115-B2F5-4BC7B90E46BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D07AF9FF-6888-4115-B2F5-4BC7B90E46BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
