@@ -17,12 +17,16 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         ConfigureMongoDb(builder);
-
+        
         RegisterAutoMapper(builder);
         ConfigureDataService(builder);
 
         // Add services to the container.
-        builder.Services.AddGrpc();
+        builder.Services.AddGrpc(options =>
+        {
+            // Exception interceptor
+            options.Interceptors.Add<GrpcExceptionInterceptor>();
+        });
 
         var app = builder.Build();
 
