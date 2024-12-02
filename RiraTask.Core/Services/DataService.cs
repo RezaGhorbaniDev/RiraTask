@@ -1,5 +1,4 @@
 ﻿using RiraTask.Core.Services.Interfaces;
-using RiraTask.Infrastructure.Repositories.Interfaces;
 
 namespace RiraTask.Core.Services;
 

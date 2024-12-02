@@ -1,6 +1,4 @@
-﻿using AutoMapper;
-
-namespace RiraTask.Api.AutoMapper.Profiles;
+﻿namespace RiraTask.Api.AutoMapper.Profiles;
 
 public class UserMappingProfile : Profile
 {

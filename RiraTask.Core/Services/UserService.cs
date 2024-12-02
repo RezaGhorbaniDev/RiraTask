@@ -1,7 +1,6 @@
 using MongoDB.Bson;
 using RiraTask.Core.Services.Interfaces;
 using RiraTask.Domain.Models;
-using RiraTask.Infrastructure.Repositories.Interfaces;
 
 namespace RiraTask.Core.Services;
 

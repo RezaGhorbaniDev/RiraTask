@@ -41,7 +41,6 @@ public class Program
     private static void ConfigurePipelines(WebApplication app)
     {
         // Configure the HTTP request pipeline.
-        app.MapGrpcService<GreeterController>();
         app.MapGrpcService<UserController>();
     }
 

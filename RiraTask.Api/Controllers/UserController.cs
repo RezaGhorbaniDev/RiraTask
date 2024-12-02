@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using Grpc.Core;
+﻿using Grpc.Core;
 using RiraTask.Api.Protos;
 using RiraTask.Core.Services.Interfaces;
 

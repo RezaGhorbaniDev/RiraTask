@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using RiraTask.Api.AutoMapper.Profiles;
+﻿using RiraTask.Api.AutoMapper.Profiles;
 
 namespace RiraTask.Api.AutoMapper;
 

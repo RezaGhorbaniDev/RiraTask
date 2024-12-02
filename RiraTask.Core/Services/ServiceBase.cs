@@ -1,6 +1,4 @@
-﻿using RiraTask.Infrastructure.Repositories.Interfaces;
-
-namespace RiraTask.Core.Services;
+﻿namespace RiraTask.Core.Services;
 
 public abstract class ServiceBase(IDataRepository rep)
 {

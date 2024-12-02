@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Options;
-using RiraTask.Domain.Models;
 
 namespace RiraTask.Infrastructure.Data;
 
