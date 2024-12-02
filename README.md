@@ -36,7 +36,7 @@ To run this project, ensure you have the following installed:
 
 1. **Clone the Repository**
    ```bash
-   git https://github.com/RezaGhorbaniDev/RiraTask.git
+   git clone https://github.com/RezaGhorbaniDev/RiraTask.git
    cd <repository-folder>
    ```
 
@@ -68,6 +68,6 @@ To run this project, ensure you have the following installed:
 
 1. Download and install Postman from [here](https://www.postman.com/downloads/)
 2. Open **Postman** and create a new gRPC request.
-3. Enter the server address (e.g., `localhost:5001`).
+3. Enter the server address (e.g., `grpc://localhost:5113`).
 4. Add the required method and message parameters in Postman’s gRPC interface.
 5.Send the request and view the response.
