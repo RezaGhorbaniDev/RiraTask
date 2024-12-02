@@ -18,6 +18,12 @@ public class Program
 
         ConfigureMongoDb(builder);
 
+        RegisterAutoMapper(builder);
+        ConfigureDataService(builder);
+
+        // Add services to the container.
+        builder.Services.AddGrpc();
+
         var app = builder.Build();
 
         ConfigurePipelines(app);
@@ -32,6 +38,7 @@ public class Program
     {
         // Configure the HTTP request pipeline.
         app.MapGrpcService<GreeterController>();
+        app.MapGrpcService<UserController>();
     }
 
     private static void ConfigureMongoDb(WebApplicationBuilder builder)
@@ -42,5 +49,20 @@ public class Program
 
         // Register MongoDB context as a singleton
         builder.Services.AddSingleton<MongoDbContext>();
+    }
+
+    private static void ConfigureDataService(WebApplicationBuilder builder)
+    {
+        builder.Services.AddScoped<IDataRepository, DataRepository>();
+        builder.Services.AddScoped<IDataService, DataService>();
+    }
+
+    private static void RegisterAutoMapper(
+        WebApplicationBuilder builder)
+    {
+        builder.Services.Configure<ApiBehaviorOptions>(options => { options.SuppressModelStateInvalidFilter = true; });
+
+        var mapper = AutoMapperConfiguration.CreateMapper();
+        builder.Services.AddSingleton(mapper);
     }
 }

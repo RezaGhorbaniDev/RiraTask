@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+option csharp_namespace = "RiraTask.Api.Protos";
+
+package user;
+
+// Service definition
+service UserGRPCService {
+  rpc GetUsers (Empty) returns (GetUsersResponse);
+  rpc GetUserById (GetUserByIdRequest) returns (GetUserResponse);
+  rpc CreateUser (CreateUserRequest) returns (EmptyResponse);
+  rpc UpdateUser (UpdateUserRequest) returns (EmptyResponse);
+  rpc DeleteUser (DeleteUserRequest) returns (EmptyResponse);
+}
+
+// Messages
+message Empty {}
+
+message GetUsersResponse {
+  repeated User users = 1;
+}
+
+message GetUserByIdRequest {
+  string userId = 1;
+}
+
+message GetUserResponse {
+  User user = 1;
+}
+
+message CreateUserRequest {
+  User user = 1;
+}
+
+message UpdateUserRequest {
+  string userId = 1;
+  User user = 2;
+}
+
+message DeleteUserRequest {
+  string userId = 1;
+}
+
+message EmptyResponse {
+}
+
+message User {
+  string id = 1;
+  string firstName = 2;
+  string lastName = 3;
+  string nationalId = 4;
+  string birthDay = 5; // DateTime as string in ISO 8601 format
+}
